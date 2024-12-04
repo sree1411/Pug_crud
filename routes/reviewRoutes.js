@@ -5,7 +5,7 @@ const fs = require('fs')
 
 
 
-router.get('/reviews', (req,res)=>{
+router.get('/', (req,res)=>{
     let reviews = JSON.parse(fs.readFileSync("reviews.txt").toString())
     res.render("home", {reviews})
  })
